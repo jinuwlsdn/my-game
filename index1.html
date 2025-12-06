@@ -1,0 +1,28 @@
+<!DOCTYPE html> <!-- HTML5 문서임을 선언. 브라우저가 이 문서를 어떻게 해석할지 알려줌 -->
+<html lang="ko"> <!-- HTML 문서의 시작. lang="ko"는 문서가 한국어임을 명시 (검색엔진, 스크린리더에 유용) -->
+<head> <!-- 문서의 메타데이터(정보)를 담는 영역. 화면에는 직접 표시되지 않음 -->
+    <meta charset="UTF-8"> <!-- 문자 인코딩을 UTF-8로 설정. 한글 등 다양한 언어를 표시하기 위해 필수 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 모바일 기기에서 화면 크기에 맞게 표시되도록 설정. 반응형 웹을 위해 필요 -->
+    <title>ball</title> <!-- 브라우저 탭에 표시될 제목 -->
+    <style> <!-- CSS 스타일을 작성하는 영역. 페이지의 디자인을 정의 -->
+        body { /* body 태그(페이지 전체)에 적용할 스타일 */
+            margin: 0; /* 기본 여백을 0으로 제거. 브라우저 기본 여백 없애기 */
+            padding: 0; /* 기본 안쪽 여백을 0으로 제거 */
+            display: flex; /* Flexbox 레이아웃 사용. 내부 요소를 유연하게 배치 */
+            justify-content: center; /* 가로축(수평)에서 중앙 정렬 */
+            align-items: center; /* 세로축(수직)에서 중앙 정렬 */
+            height: 100vh; /* 높이를 뷰포트(브라우저 화면) 높이의 100%로 설정 */
+            background-color: #333; /* 배경색을 어두운 회색(#333333)으로 설정 */
+        }
+        canvas { /* canvas 태그에 적용할 스타일 */
+            border: 2px solid white; /* 2픽셀 두께의 흰색 테두리 추가. 게임 영역을 시각적으로 구분 */
+            background-color: black; /* 캔버스 배경을 검은색으로 설정 */
+        }
+    </style>
+</head>
+<body> <!-- 실제로 화면에 표시되는 콘텐츠 영역 -->
+    <canvas id="gameCanvas" width="800" height="600"></canvas> <!-- 게임 그래픽을 그릴 캔버스 요소. id로 JavaScript에서 접근 가능, 크기는 800x600 픽셀 -->
+    <script src="game.js"></script> <!-- 외부 JavaScript 파일(game.js)을 불러옴. 게임 로직이 들어있을 파일 -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
+</body>
+</html> <!-- HTML 문서의 끝 -->
